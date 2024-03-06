@@ -19,3 +19,11 @@
     justify-content: center;
     align-items: center;
 }
+
+h2 {
+    padding: 12px;
+}
+
+.winner {
+    color: darkred;
+}
