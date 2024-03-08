@@ -1,24 +1,32 @@
 //initialization
 const gameArray = new Array(9).fill("");
 let turn = ["X"];
-let gameOver = false;
+let gameOver = true;
 let nameOne;
 let nameTwo;
 
 const playerTurn = document.querySelector(".player");
 const playerName = document.querySelector(".player__name");
 const newGame = document.querySelector(".btn__new_game");
+const startGame = document.querySelector(".btn__start_game");
+const startText = document.querySelector(".start")
 const square = document.querySelectorAll(".square");
 const winner = document.querySelector(".winner");
 const form = document.querySelector(".form");
 
 newGame.addEventListener("click", reset);
+startGame.addEventListener("click", start);
 form.addEventListener("submit", validateForm);
+
+function start() {
+  gameOver = false;
+  startText.textContent = "START!"
+}
 
 function reset() {
   gameArray.fill("");
-  gameOver = false;
-  winner.textContent = nameOne = nameTwo = "";
+  gameOver = true;
+  startText.textContent = winner.textContent = nameOne = nameTwo = "";
   playerName.textContent = "Player";
   turn = ["X"];
   playerTurn.textContent = turn;
@@ -39,7 +47,7 @@ function renderSquare() {
 }
 
 function nameChange(name) {
-  turn[1] = name
+  turn[1] = name;
   playerName.textContent = name;
 }
 
@@ -100,6 +108,7 @@ function checkWinner(name) {
     gameOver = true;
     return;
   }
+  playerChange();
 }
 
 function fillSquare(e) {
@@ -107,7 +116,6 @@ function fillSquare(e) {
   if (!gameArray[e.target.id] && !gameOver) {
     gameArray[e.target.id] = turn[0];
     checkWinner(turn);
-    playerChange();
   }
   renderSquare();
 }

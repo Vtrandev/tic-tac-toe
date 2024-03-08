@@ -14,7 +14,6 @@
         <div class="row">
 
             <h1 class="title">Tic Tac Toe</h1>
-            <button class="btn btn__new_game">New Game</button>
 
             <form method="post" action="https://httpbin.org/post" class="form">
                 <label for="first_player">First Player</label>
@@ -22,10 +21,17 @@
                 <label for="second_player">Second Player</label>
                 <input type="text" name="second_player" id="second_player" />
                 <button class="btn btn__submit" type="submit">Submit</button>
+
             </form>
 
-            <h2><span class="player__name">Player</span> Turn: <span class="player">X</span></h2>
+            <button class="btn btn__new_game">New Game</button>
+            <button class="btn btn__start_game">Start Game</button>
+            <span class="reminder">Remember to click start!</span>
+
+            <h2 class="start"></h2>
             <h2 class="winner"></h2>
+            <h2><span class="player__name">Player</span> Turn: <span class="player">X</span></h2>
+
             <div class="game">
                 <div class="square"></div>
                 <div class="square"></div>

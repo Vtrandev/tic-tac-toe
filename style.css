@@ -16,7 +16,7 @@ section {
 }
 
 h2 {
-  padding: 12px;
+  padding: 8px;
 }
 
 .title {
@@ -33,15 +33,28 @@ form {
 }
 
 form > * {
-    margin: 4px;
+    margin: 6px 0;
+}
+
+input {
+    padding: 8px;
 }
 
 .btn {
   padding: 4px 12px;
   color: white;
+  font-size: 24px;
   background-color: rgb(106, 0, 255);
   border-radius: 5px;
   border: none;
+}
+
+.btn:hover {
+    background-color: blueviolet;
+}
+
+.reminder {
+    font-size: 12px;
 }
 
 .game {
