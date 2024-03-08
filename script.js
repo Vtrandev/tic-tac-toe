@@ -7,18 +7,18 @@ let nameTwo;
 
 const playerTurn = document.querySelector(".player");
 const playerName = document.querySelector(".player__name");
-const newGame = document.querySelector(".btn__new_game");
-const startGame = document.querySelector(".btn__start_game");
 const startText = document.querySelector(".start")
 const square = document.querySelectorAll(".square");
 const winner = document.querySelector(".winner");
-const form = document.querySelector(".form");
 
-newGame.addEventListener("click", reset);
-startGame.addEventListener("click", start);
-form.addEventListener("submit", validateForm);
+const newGame = document.querySelector(".btn__new_game").addEventListener("click", reset);
+const startGame = document.querySelector(".btn__start_game").addEventListener("click", start);
+const form = document.querySelector(".form").addEventListener("submit", validateForm);;
 
 function start() {
+  if (winner.textContent){
+    return
+  }
   gameOver = false;
   startText.textContent = "START!"
 }
