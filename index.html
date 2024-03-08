@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,23 @@
     <script src="./script.js" defer></script>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <h1>Tic Tac Toe</h1>
+    <button class="btn btn__new_game">New Game</button>
 
-    <h2>Player Turn: <span class="player">X</span></h2>
+    <form 
+    method="post" 
+    action="https://httpbin.org/post" 
+    class="form">
+        <label for="first_player">First Player</label>
+        <input type="text" name="first_player" id="first_player" />
+        <label for="second_player">Second Player</label>
+        <input type="text" name="second_player" id="second_player" />
+        <button class="btn btn__submit" type="submit">Submit</button>
+    </form>
+
+    <h2><span class="player__name">Player</span> Turn: <span class="player">X</span></h2>
     <h2 class="winner"></h2>
     <div class="game">
         <div class="square"></div>
@@ -24,4 +38,5 @@
         <div class="square"></div>
     </div>
 </body>
+
 </html>
