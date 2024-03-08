@@ -96,7 +96,7 @@ function checkWinner(name) {
     checkLine([0, 4, 8]) ||
     checkLine([2, 4, 6])
   ) {
-    winner.textContent = `Winner: ${name[0]}!`;
+    winner.textContent = `Winner: ${name[1] || name[0]}!`;
     gameOver = true;
     return;
   }

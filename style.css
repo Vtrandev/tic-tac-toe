@@ -5,23 +5,43 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  max-width: 1200px;
+}
+
 h2 {
-    padding: 12px;
+  padding: 12px;
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+form > * {
+    margin: 4px;
 }
 
 .btn {
-    padding: 4px 12px;
-    color: white;
-    background-color: rgb(106, 0, 255);
-    border-radius: 5px;
-    border: none;
+  padding: 4px 12px;
+  color: white;
+  background-color: rgb(106, 0, 255);
+  border-radius: 5px;
+  border: none;
 }
 
 .game {
@@ -32,15 +52,13 @@ form {
 }
 
 .square {
-    font-size: 60px;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-size: 60px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
 .winner {
-    color: darkred;
+  color: darkred;
 }
